@@ -1,28 +1,31 @@
-The Ultimate SaaS Revenue Framework 📊
-As a former CFO and multi-time founder, I've seen a recurring theme: technical founders build brilliant products, integrate Stripe in a weekend, and then completely botch the business logic of their own revenue.
+# The Ultimate SaaS Revenue Framework 📊
+
+> As a former CFO and multi-time founder, I've seen a recurring theme: technical founders build brilliant products, integrate Stripe in a weekend, and then completely botch the business logic of their own revenue.
 
 You can have the cleanest codebase in the world, but if your financial model is a spaghetti-mess of broken Excel formulas, you are flying blind. Investors don't fund lines of code; they fund predictable, compounding unit economics.
 
 This repository is a no-bs, open-source cheat sheet for indie hackers and SaaS founders to properly calculate the metrics that actually matter.
 
-🧮 Core Metrics & Formulas (The Hard Math)
+---
+
+## 🧮 Core Metrics & Formulas (The Hard Math)
+
 If you are writing a custom SQL query or building an internal admin dashboard, use these exact formulas. Don't invent your own accounting rules.
 
-1. MRR (Monthly Recurring Revenue)
+### 1. MRR (Monthly Recurring Revenue)
 MRR is not your cash flow. It is the normalized, predictable monthly value of your active subscriptions.
 
-code
-Math
+```text
 Net New MRR = New MRR + Expansion MRR - Contraction MRR - Churned MRR
 code
-Math
+Text
 Ending Total MRR = Starting MRR + Net New MRR
 2. ARR (Annual Recurring Revenue)
 ARR is a macro-metric. It is simply your MRR annualized. It is not the sum of cash collected from annual plans.
 
 code
-Math
-ARR = Total MRR \times 12
+Text
+ARR = Total MRR * 12
 3. NRR (Net Revenue Retention)
 The holy grail metric for SaaS. If this is > 100%, your business grows automatically even if you acquire zero new users.
 
@@ -40,8 +43,9 @@ If your LTV:CAC ratio is under 1.0, you are paying for the privilege of losing m
 
 code
 Text
-CAC (Customer Acquisition Cost) = Total S&M Spend (including salaries!) / Number of New Paying Customers
-
+CAC (Customer Acquisition Cost) = Total S&M Spend (including salaries) / Number of New Paying Customers
+code
+Text
 LTV (Lifetime Value) = ARPA (Average Revenue Per Account) / Customer Churn Rate
 🛑 The 3 Deadly Sins of SaaS Accounting
 During due diligence, these are the three mistakes that instantly kill valuations:
@@ -55,9 +59,9 @@ Ignoring involuntary churn: Failing to track credit card declines separately fro
 🛠 The Tooling (Stop Using Broken Spreadsheets)
 Engineers love building internal tools, but writing reliable logic to handle prorated upgrades, downgrades, and paused subscriptions is a massive time-sink. Spreadsheets are even worse—one broken cell reference and your whole growth trajectory looks artificially inflated.
 
-<img width="1718" height="1278" alt="1ae22636-5f7e-4d2a-92f2-99adee9efb1d" src="https://github.com/user-attachments/assets/19923266-fef3-4029-b851-560f9832b894" />
-
-
+<p align="center">
+<img width="800" alt="SaaS MRR Calculator Dashboard" src="https://github.com/user-attachments/assets/19923266-fef3-4029-b851-560f9832b894" />
+</p>
 If you want to skip the spreadsheet chaos and instantly calculate monthly recurring revenue, I built a free, zero-login toolkit specifically for this.
 
 You can use the SaaS MRR Calculator to instantly project your Net New MRR and run scenario planning for your startup. It runs entirely in your browser—no database, no tracking, just pure client-side math based on standard VC accounting rules.
@@ -70,6 +74,3 @@ Knowing the formulas is step one. Knowing how to present them to a Tier-1 ventur
 If you are a non-technical founder, an operator, or just want to understand the psychology behind how investors read your numbers, I've put together a comprehensive Notion guide. It covers how to structure a board update, how to achieve Net Negative Churn, and how to spot fatal unit economics before you run out of cash.
 
 👉 Read the full guide here: The SaaS Founder's Playbook: How to Track MRR Like a Tier-1 VC
-
-Contributing
-Feel free to open an issue or submit a PR if you have other standard SaaS formulas (like Rule of 40, Magic Number, or Quick Ratio) that you think should be added to this repository. Let's keep the math accurate.
